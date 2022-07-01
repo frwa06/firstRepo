@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms with CSS</title>
+    <style>
+        *{box-sizing: content-box;}
+        body{
+            background-color: black;
+            color: aliceblue;
+            display: flex;
+            flex-direction: column;
+
+        }
+        input{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 10px 0px;
+            border: 2px solid blue;
+            border-radius: 10px 10px 10px 10px;
+            background-color: black;
+            color:aliceblue;
+        }
+        input:focus{
+            background-color: aqua;
+            border:2px solid cyan;
+        }
+        button{
+            background-color: blueviolet;
+            color:antiquewhite;
+            border: none;
+            padding: 12px 32px;
+            margin: 4px 2px;
+            border-radius: 10px;
+            display: flex;
+            cursor: pointer;            
+        }
+        button:hover{
+            background-color: aqua;
+        }
+        select{
+            width: 102%;
+            height: 12%;
+            margin: 10px 0px;
+            padding-left: 20px;
+            border: 2px solid blue;
+            border-radius: 10px 10px 10px 10px;
+            background-color: black;
+            color:cyan;
+        }   
+        select:focus{
+            background-color: rgb(0, 0, 0);
+            border:2px solid cyan;
+
+        }
+        ::placeholder{
+            color: cyan;
+        }
+        .container{
+            border-radius: 10px;
+            background-color: rgba(0, 0, 255, 0.208);
+            display: flex;
+            padding: 30px;
+            margin: 30px;
+        
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario estilizado con CSS</h1>
+    <div class="container">
+        <form action="http://localhost:3000" method="post">
+            <label form="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Pon tu nombre"/>
+            <label form="apellido">Apellido</label>
+            <input type="text" name="apellido" id="apellido" placeholder="Pon tu apellido "/>
+            <label form="tel">Teléfono</label>
+            <input type="number" name="tel" id="tel" placeholder="Pon tu teléfono"/>
+            <label form="pais">País</label>
+            <select name="País" id="pais">
+                <option disabled selected hidden>Seleccione</option>
+                <option>Colombia</option>
+                <option>EEUU</option>
+                <option>Ecuador</option>
+                <option>Argentina</option>
+                <option>Guatemala</option>
+            </select>
+            <button type="submit">Enviar</button>
+
+        </form>
+    </div>
+    
+</body>
+</html>
